@@ -18,9 +18,12 @@ $app->get('/', 'AirCrash\Controllers\Homepage::showPage')
 
 
 
+$app->get('/userview', 'AirCrash\Controllers\Userview::showForm')
+->bind('userview');
+$app->post('/userview', 'AirCrash\Controllers\Userview::submitForm'); 
 $app->get('/contact', 'AirCrash\Controllers\Contact::showForm')
 ->bind('contact');
-$app->post('/contact', 'AirCrash\Controllers\Contact::submitForm'); 
+$app->post('/contact', 'AirCrash\Controllers\Contact::submitForm');
 
 $app->get('/login', 'AirCrash\Controllers\LoginController::showForm')
 ->bind('login');

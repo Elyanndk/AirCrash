@@ -1,0 +1,54 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<h1>Vos coordonnées</h1>
+<form action="" method="post">
+	<fieldset>
+		<ul>
+			<li>
+				<label for="email">Adresse e-mail :</label>
+				<input type="email" name="email" id="email" required>
+			</li>
+			<li>
+				<label for="password">Mot de passe :</label>
+				<input type="password" name="password" id="password" required>
+			</li>
+			<li>
+				<label for="lastname">Nom :</label>
+				<input type="text" name="lastname" id="lastname" required>
+			</li>
+			<li>
+				<label for="firstname">Prénom :</label>
+				<input type="text" name="firstname" id="firstname" required>
+			</li>
+			<li>
+				<label for="birthDate">Date de Naissance :</label>
+				<input type="date" name="birthDate" id="birthDate
+				" required>
+			</li>
+			<li>
+				<label for="address">Adresse :</label>
+				<input type="text" name="address" id="address" required>
+			</li>
+			<li>
+				<label for="zipCode">Code Postal :</label>
+				<input type="number" name="zipCode" id="zipCode" data-type="number" required maxlength="5">
+			</li>
+			<li>
+				<label for="city">Ville :</label>
+				<input type="text" name="city" id="city" required>
+			</li>
+			<li>
+				<label for="country">Pays :</label>
+				<input type="text" name="country" id="country" required>
+			</li>
+			<li>
+				<label for="phone">Téléphone :</label>
+				<input type="text" name="phone" id="phone" data-type="number" required maxlength="10">
+			</li>
+			<li>
+				<input type="submit" value="Envoyer" />
+			</li>
+		</ul>
+	</fieldset>
+</form>
+{% endblock %}

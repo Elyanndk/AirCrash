@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Exemple Silex Twig</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="flexslider/jquery.flexslider.js"></script>
+<link rel="stylesheet" href="flexslider/flexslider.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script type="text/javascript" charset="utf-8">
+  			$(window).load(function() {
+    			$('.flexslider').flexslider();
+  			});
+		</script>
+
+		<title>Air'Crash</title>
 	</head>
 	<body>
-		<nav>
-			<a href="{{ url('home') }}">Page d'accueil</a>
+	<header>
+		<div id="logo">
+			<img class="logo" src="images/logo.jpg">
+			<h1>Air'Crash</h1>
+		</div>
+		<nav id="nav">
 			<a href="{{ url('contact') }}">Nous contacter</a>
-			<a href="{{ url('login') }}">Connectez vous !</a>
+			<a href="{{ url('userview') }}"><i class="fas fa-user-plus"></i></i>Créer mon compte</a>
+			<a href="{{ url('login') }}"><i class="fas fa-user" ></i>Mon compte</a>
 		</nav>
+		<hr>
+		<nav id="nav2">
+			<a href="{{ url('home') }}"><i class="fas fa-home"></i></a>
+			<a href="">MES RÉSERVATIONS</a>
+		</nav>
+
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<img class="slide" src="images/img0.jpg">
+				</li>
+				<li>
+					<img class="slide" src="images/img1.jpg">
+				</li>
+				<li>
+					<img class="slide" src="images/img2.jpg">
+				</li>
+			</ul>
+		</div>
+	</header>
 		{% block body %}{% endblock %}
 	</body>
 </html>
